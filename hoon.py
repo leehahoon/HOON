@@ -38,7 +38,7 @@ def results():
 	encText = encText.replace(' ', '%20')
 	encText = urllib.parse.quote(encText)
 
-	url = 'https://apis.daum.net/search/web?apikey=d755bb7ac08c935267c72c2f2b0870be&q='+encText+'&output=json'
+	url = 'https://apis.daum.net/search/web?apikey={apikey}&q='+encText+'&output=json'
 	request = urllib.request.Request(url)
 	response = urllib.request.urlopen(request, context=context)
 	rescode = response.getcode()
